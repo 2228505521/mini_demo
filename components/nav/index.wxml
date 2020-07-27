@@ -1,0 +1,6 @@
+
+<view class="container">
+    <image bind:tap="onLeft" class="left-img" src="{{ letest ? '' : leftSrc }}"></image>
+    <text class="title">{{ title }}</text>
+    <image bind:tap="onRight" class="right-img" src="{{ first ? '' : rightSrc }}"></image>
+</view>

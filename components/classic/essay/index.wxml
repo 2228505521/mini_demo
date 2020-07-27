@@ -1,0 +1,6 @@
+
+<view class="container">
+    <image class="essay-img" src="{{ img }}"></image>
+    <image class="essay-tag" src="../../images/诗句tag@2x.png"></image>
+    <text class="essay-content">{{ content }}</text>
+</view>

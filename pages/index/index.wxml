@@ -1,0 +1,17 @@
+<view class="container">
+    <view class="header-container">
+        <v-epsoide class="epsoide" date="{{ classicData.index }}"></v-epsoide>
+
+        <v-like class="like" bind:like="onLike" like="{{ classicData.like_status }}"
+                count="{{ classicData.fav_nums }}"></v-like>
+    </view>
+
+
+    <v-movie wx:if="{{ classicData.type == 100 }}" img="{{ classicData.image }}" content="{{ classicData.content }}"></v-movie>
+
+    <v-music wx:if="{{ classicData.type == 101 }}"></v-music>
+
+    <v-essay wx:if="{{ classicData.type == 102 }}"></v-essay>
+
+    <v-nav bind:left="onLeft" bind:right="onRight" class="nav-container" title="{{ classicData.title }}" first="{{ first }}" letest="{{ letest }}"></v-nav>
+</view>
