@@ -1,40 +1,40 @@
 {
-  "pages": [
-    "pages/index/index",
-    "pages/logs/logs",
-    "pages/my/index",
-    "pages/book/index"
-  ],
-  "window": {
-    "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle": "black"
-  },
-  "tabBar": {
-    "list": [
-      {
-        "text": "流行",
-        "iconPath": "images/classic.png",
-        "pagePath": "pages/index/index",
-        "selectedIconPath": "images/classic@highlight.png"
-      },
-      {
-        "text": "书籍",
-        "iconPath": "images/book.png",
-        "pagePath": "pages/book/index",
-        "selectedIconPath": "images/book@highlight.png"
-      },
-      {
-        "text": "我的",
-        "iconPath": "images/my.png",
-        "pagePath": "pages/my/index",
-        "selectedIconPath": "images/my@highlight.png"
-      }
+    "pages": [
+        "pages/index/index",
+        "pages/logs/logs",
+        "pages/my/index",
+        "pages/book/index"
     ],
-    "selectedColor": "#000000",
-    "color": "#c7c7c7",
-    "backgroundColor": "#ffffff",
-    "borderStyle": "light"
-  }
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "WeChat",
+        "navigationBarTextStyle": "black"
+    },
+    "tabBar": {
+        "list": [
+            {
+                "text": "流行",
+                "iconPath": "images/classic.png",
+                "pagePath": "pages/index/index",
+                "selectedIconPath": "images/classic@highlight.png"
+            },
+            {
+                "text": "书籍",
+                "iconPath": "images/book.png",
+                "pagePath": "pages/book/index",
+                "selectedIconPath": "images/book@highlight.png"
+            },
+            {
+                "text": "我的",
+                "iconPath": "images/my.png",
+                "pagePath": "pages/my/index",
+                "selectedIconPath": "images/my@highlight.png"
+            }
+        ],
+        "selectedColor": "#000000",
+        "color": "#c7c7c7",
+        "backgroundColor": "#ffffff"
+    },
+    "sitemapLocation": "sitemap62.json"
 }

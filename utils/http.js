@@ -1,8 +1,8 @@
 
-import {config} from '../config.js';
+import { config } from '../config.js';
 
 const tips = {
-    1:  '服务器错误',
+    1: '服务器错误',
     1005: 'appkey无效',
     3000: '连接不存在',
 };
@@ -12,6 +12,7 @@ class Http {
     request(params) {
         if (!params.method) {
             params.method = 'GET';
+
         }
         wx.request({
             url: config.api_base_url + params.url,

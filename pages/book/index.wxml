@@ -1,2 +1,6 @@
-<!--pages/book/index.wxml-->
-<text>pages/book/index.wxml</text>
+
+<view class="container">
+    <block wx:for="{{ books }}">
+        <v-book book="{{ item }}"></v-book>
+    </block>
+</view>
