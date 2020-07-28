@@ -16,7 +16,8 @@ class Http {
         }
 
         _request(url, resolve, reject, data = {}, method = 'GET') {
-
+                console.log(url);
+                console.log(config.api_base_url + url);
                 wx.request({
                         url: config.api_base_url + url,
                         method: method,

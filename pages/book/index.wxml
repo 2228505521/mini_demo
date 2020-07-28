@@ -1,6 +1,6 @@
 
 <view class="container">
     <block wx:for="{{ books }}">
-        <v-book book="{{ item }}"></v-book>
+        <v-book bind:click="onClick" book="{{ item }}"></v-book>
     </block>
 </view>

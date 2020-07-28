@@ -1,0 +1,20 @@
+
+<wxs src="../../utils/filter.wxs" module="util"></wxs>
+
+<view class="container">
+
+    <v-tag wx:for="{{ util.limit(tags, 2) }}" tag="{{ item }}">
+            <text class="num" slot="after">{{ '+' + item.num }}</text>
+    </v-tag>
+    <view class="summary-container">
+        <text class="summary" decode="{{ true }}">{{ util.format(summary) }}</text>
+    </view>
+
+    <view class="footer-container">
+        <view class="input-fake">
+            <text>请输入短评</text>
+        </view>
+        <v-like class="like" like="{{ true }}" count="{{ 10 }}"></v-like>
+        <view class="share">分享</view>
+    </view>
+</view>

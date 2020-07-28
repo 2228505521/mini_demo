@@ -1,0 +1,7 @@
+
+<view class="container">
+    <text class="text">{{ tag.text }}</text>
+<!--    <text class="num">{{ '+' + tag.num }}</text>-->
+<!--  插槽  -->
+    <slot class="num" name="after"></slot>
+</view>

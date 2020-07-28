@@ -1,0 +1,55 @@
+/* pages/book-detail/index.wxss */
+
+.container {
+    margin-bottom: 120rpx;
+}
+
+.num {
+    margin-left: 10rpx;
+    font-size: 22rpx;
+    color: #cbcbcb;
+}
+
+.summary {
+    text-indent: 58rpx;
+    width: 100%;
+}
+
+.footer-container {
+    background: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    height: 110rpx;
+    width: 100%;
+    border-top: 1px solid red;
+}
+
+.input-fake {
+    width: 70%;
+    margin-left: 20rpx;
+    height: 70rpx;
+    border-radius: 35rpx;
+    border-color: red;
+    border-width: 1px;
+    background: #cdcdcd;
+}
+
+.input-fake text {
+    font-size: 24rpx;
+    padding: 10rpx;
+    line-height: 70rpx;
+    margin-left: 20rpx;
+}
+
+.like {
+    margin-left: 20rpx;
+}
+
+.share {
+    margin-right: 20rpx;
+    font-size: 18prx;
+}

@@ -9,6 +9,18 @@ class BookModel extends Http {
     getMyBookCount() {
         return this.request('/book/favor/count');
     }
+
+    getDetail(bid) {
+        return this.request('/book/'+ bid +'/detail');
+    }
+
+    getLikeStatus(bid) {
+        return this.request('/book/'+ bid +'/favor');
+    }
+
+    getComments(bid) {
+        return this.request('/book/'+ bid +'/short_comment');
+    }
 };
 
 export {BookModel}

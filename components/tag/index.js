@@ -1,10 +1,15 @@
-// components/book/index.js
+// components/tag/index.js
 Component({
+
+    options: {
+        multipleSlots: true
+    },
+
     /**
      * 组件的属性列表
      */
     properties: {
-        book:Object,
+        tag: Object
     },
 
     /**
@@ -18,10 +23,6 @@ Component({
      * 组件的方法列表
      */
     methods: {
-        onClick: function () {
-            this.triggerEvent('click', {
-                id: this.properties.book.id
-            }, {});
-        }
+
     }
 })

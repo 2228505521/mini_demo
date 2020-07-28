@@ -1,0 +1,28 @@
+
+//换行符格式化
+var format = function (text) {
+    if (!text) {
+        return ;
+    }
+    var reg = getRegExp('\\\\n', 'g');
+    return text.replace(reg, '\n&nbsp;&nbsp;&nbsp;&nbsp;');
+}
+
+//数组长度过滤器
+var limit = function(list, length) {
+    if (!list) {
+        return ;
+    }
+    return list.slice(0, length);
+}
+
+
+//此filter 模块和ES6里面的module不一样，和ES5的语法非常像
+//wxs 虽然语法形式和JS很像，但是wxs代码拥有自己独立的运行环境
+//需要在开发文档里面详细了解，wxs语法
+
+//需要这样进行导入
+module.exports = {
+    format: format,
+    limit: limit
+}
