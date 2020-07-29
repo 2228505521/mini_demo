@@ -53,3 +53,34 @@
     margin-right: 20rpx;
     font-size: 18prx;
 }
+
+.posting-container {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 250rpx;
+    background: white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 20rpx;
+    z-index: 100;
+}
+
+.posting-container .post-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.posting-container .post {
+    margin-top: 30rpx;
+    min-height: 50rpx;
+    padding-left: 20rpx;
+    padding-right: 20rpx;
+    border: 1px solid #cdcdcd;
+    border-radius: 25rpx;
+}

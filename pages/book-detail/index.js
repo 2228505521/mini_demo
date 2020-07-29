@@ -10,6 +10,7 @@ Page({
      * 页面的初始数据
      */
     data: {
+        posting: false,
         comments: [],
         detail: Object,
         likeStatus: false,
@@ -47,9 +48,17 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
+
+        wx.showLoading({
+            title: '加载中..'
+        });
         console.log(options);
         let bid = options.bid;
 
+        let detail = bookModel.getDetail(1);
+        let likeStatus = bookModel.getLikeStatus(bid);
+
+        /*
         bookModel.getDetail(1).then(res=>{
             this.setData({
                 comments: res
@@ -62,6 +71,30 @@ Page({
                 likeStatus: res.like_status,
                 likeCount: res.fav_nums
             });
+        });
+        */
+
+        //Promise.all并行发起网络请求，统一返回后，再进入最终回调
+        //Promise.race 任何一个子promise优先请求成功后，就会直接返回
+        //最终res返回的是数组中每个返回值的res
+        Promise.all([detail, likeStatus]).then(res=> {
+            this.setData({
+                book: res[0],
+                likeStatus: res[1]
+            });
+            wx.hideLoading();
+        });
+    },
+
+    onClickFake: function(event) {
+        this.setData({
+            posting: true
+        });
+    },
+
+    onClickCancelPost: function(event) {
+        this.setData({
+            posting: false
         });
     },
 

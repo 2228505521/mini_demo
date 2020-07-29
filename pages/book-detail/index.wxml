@@ -1,20 +1,37 @@
-
 <wxs src="../../utils/filter.wxs" module="util"></wxs>
 
 <view class="container">
 
-    <v-tag wx:for="{{ util.limit(tags, 2) }}" tag="{{ item }}">
+    <view class="comment-container">
+        <v-tag wx:for="{{ util.limit(tags, 2) }}" tag="{{ item }}">
             <text class="num" slot="after">{{ '+' + item.num }}</text>
-    </v-tag>
+        </v-tag>
+    </view>
+
     <view class="summary-container">
         <text class="summary" decode="{{ true }}">{{ util.format(summary) }}</text>
     </view>
+</view>
 
-    <view class="footer-container">
-        <view class="input-fake">
-            <text>请输入短评</text>
-        </view>
-        <v-like class="like" like="{{ true }}" count="{{ 10 }}"></v-like>
-        <view class="share">分享</view>
+<view class="footer-container" wx:if="{{ !posting }}">
+    <view class="input-fake" bind:tap="onClickFake">
+        <text>请输入短评</text>
+
     </view>
+    <v-like class="like" like="{{ true }}" count="{{ 10 }}"></v-like>
+    <view class="share">分享</view>
+</view>
+
+<v-mask wx:if="{{ posting }}"></v-mask>
+<view class="posting-container" wx:if="{{ posting }}">
+    <view class="post-header">
+        <text>仅可点击标签栏</text>
+        <text class="cancel" bind:tap="onClickCancelPost">取消</text>
+    </view>
+    <view class="comment-container">
+        <v-tag wx:for="{{ util.limit(tags, 2) }}" tag="{{ item }}">
+            <text class="num" slot="after">{{ '+' + item.num }}</text>
+        </v-tag>
+    </view>
+    <input class="post" placeholder="短评最多12个字"></input>
 </view>
